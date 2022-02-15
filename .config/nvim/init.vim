@@ -22,6 +22,11 @@ set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
 set termguicolors
+set ffs=unix
+set encoding=utf-8
+set fileencoding=utf-8
+set listchars=eol:¶
+set list
 "set scrolloff=8
 
 set colorcolumn=80
@@ -50,6 +55,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'tpope/vim-endwise'
 Plug 'mhinz/vim-mix-format'
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/goyo.vim'
 
 " ctrl+D , ctrl+f
 Plug 'psliwka/vim-smoothie'
@@ -61,6 +67,10 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Antlr
 Plug 'dylon/vim-antlr'
+
+" For clang-format
+
+Plug 'rhysd/vim-clang-format'
 call plug#end()
 
 
@@ -169,3 +179,5 @@ let g:airline_theme='badwolf'
 " antlr
 au BufRead,BufNewFile *.g set filetype=antlr3
 au BufRead,BufNewFile *.g4 set filetype=antlr4
+
+let g:clang_format#auto_format = 1
